@@ -1,0 +1,13 @@
+﻿@model QuizModel
+@{ ViewData["Title"] = "Quiz"; }
+
+<h1>Quiz</h1>
+<div>
+    <h2 style="font-size: 20px">@Model.val1  @Model.curOper @Model.val2 =</h2>
+    <form method="post">
+        <input name="UserAnswer" type="number" style="width:300px;height:35px"> @Html.ValidationMessageFor(p => p.userAnswer)
+        <br>
+        <input type="submit" value="Next" name="Action" class="btn btn-light mt-3 pr-3 pl-3">
+        <input type="submit" value="Finish" name="Action" class="btn btn-primary mt-3 pr-3 pl-3">
+    </form>
+</div>
